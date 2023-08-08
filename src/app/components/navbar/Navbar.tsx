@@ -2,15 +2,24 @@
 import style from './styles.module.css'
 export default function Navbar() {
   return (
-    <header id={style.header}>
         <nav className={style.nav}>
-            <div>Bikalpa</div>
-            <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Contact</li>
-            </ul>
+            <div className={style.left}>
+                <div className={style.logo}>BikalpaPaudel</div>
+                <div className={style.nav_link}>
+                    <div>Home</div>
+                    <div>Projects</div>
+                    <div>Blog</div>
+                </div>
+            </div>
+            <div className={style.right}>
+                <div className={style.nav_link}>
+                    <div>Home</div>
+                    <div>Projects</div>
+                    <div>Blog</div>
+                    <div>Blog</div>
+                    <div>Blog</div>
+                </div>
+            </div>
         </nav>
-    </header>
   )
 }
