@@ -1,0 +1,17 @@
+.home{
+  display: flex;
+  min-height: 100vh;
+}
+.right{
+  flex: 2;
+  background: url('portImg3.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -99;
+
+
+
+}
+.left{
+  flex: 1;
+}
