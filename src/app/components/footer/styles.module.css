@@ -1,3 +1,23 @@
 .footer{
-    background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 70px;
+    background-color: #222;
+}
+.email, .copywrite, .connect{
+    display: flex;
+    align-items: center;
+    color: #ada4a4;
+    font-size: 1.2rem;
+    gap: 5px;
+}
+.connect{
+    flex-direction: column;
+}
+.icon{
+    display: flex;
+    font-size: 1.6rem;
+    gap: 10px;
+    cursor: pointer;
 }

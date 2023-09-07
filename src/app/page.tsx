@@ -37,8 +37,8 @@ export default function Home() {
             Reach me here <BiMessageRoundedDots />
           </div>
         </div>
-        <p className={style.info}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae error molestias ut fugit eveniet animi eos asperiores quidem temporibus iure?
+        <p className={style.info}>      
+          I'm currently focused on honing my frontend development skills and have a strong desire to expand my expertise into backend and other areas of software development in the future.
         </p>
         <div className={style.explore}>
           <div className={style.green}></div>
