@@ -6,8 +6,6 @@ import {FiGithub,FiLinkedin, FiTwitter} from 'react-icons/fi'
 
 
 
-
-
 import style from './page.module.css'
 export default function Home() {
   return (

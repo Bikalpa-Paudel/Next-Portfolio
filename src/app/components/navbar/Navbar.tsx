@@ -1,20 +1,21 @@
 import {BsSun} from 'react-icons/bs'
 import style from './styles.module.css'
+import Link from 'next/link'
 export default function Navbar() {
   return (
         <nav className={style.nav}>
             <div className={style.left}>
                 <div className={style.logo}>BIKALPA</div>
                 <div className={style.nav_link}>
-                    <div>Home</div>
-                    <div>Projects</div>
-                    <div>Blog</div>
+                    <Link href='/' className={style.link}>Home</Link>
+                    <div className={style.link}>Projects</div>
+                    <div className={style.link}>Blog</div>
                 </div>
             </div>
             <div className={style.right}>
                 <div className={style.nav_link}>
-                    <div>About</div>
-                    <div>Contact</div>
+                    <Link href="/about" className={style.link}>About</Link>
+                    <div className={style.link}>Contact</div>
                 </div>
                 <BsSun className={style.theme}/>
             </div>

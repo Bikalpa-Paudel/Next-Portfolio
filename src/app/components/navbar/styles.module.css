@@ -38,10 +38,10 @@
     gap: 50px;
     
 }
-.nav_link div{
+.link{
     transition: all .3s linear;
 }
-.nav_link div:hover{
+.link:hover{
     cursor: pointer;
     transform: rotateZ(-3deg);
     text-shadow: 1px 2px 2px rgb(255, 0, 0);   
