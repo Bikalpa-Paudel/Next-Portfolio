@@ -15,7 +15,7 @@ export default function Navbar() {
             <div className={style.right}>
                 <div className={style.nav_link}>
                     <Link href="/about" className={style.link}>About</Link>
-                    <div className={style.link}>Contact</div>
+                    <Link href='/contact' className={style.link}>Contact</Link>
                 </div>
                 <BsSun className={style.theme}/>
             </div>

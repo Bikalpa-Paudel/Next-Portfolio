@@ -12,6 +12,9 @@ import tailwind from '../../../public/Images/tailwind.png'
 import typescript from '../../../public/Images/typescript.png'
 import Image from 'next/image'
 
+import {LuGraduationCap} from 'react-icons/lu'
+import {TbDeviceImacCode} from 'react-icons/tb'
+
 function About() {
   const techStack = [
 
@@ -83,6 +86,17 @@ function About() {
         
         </div>
         <div className={style.right}>
+          <div className={style.edu_exp}>
+            <div className={style.education}>
+              <div className={style.education_text}><LuGraduationCap className={style.right_icon}/> My Education:</div>
+              <div className={style.list}>
+                
+              </div>
+            </div>
+            <div className={style.experience}>
+              <div className={style.experience_text}><TbDeviceImacCode className={style.right_icon}/> My Experience:</div>
+            </div>
+          </div>
         </div>
     </section>
   )

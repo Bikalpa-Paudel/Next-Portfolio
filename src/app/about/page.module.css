@@ -19,6 +19,8 @@
     padding-right: 50px;
 }
 .right{
+    padding-top: 120px;
+    
     flex: 1;
     background-color: #222222;
 }
@@ -46,11 +48,16 @@
     background-color: #dddddd;
     z-index: -98;
 }
+.about_para{
+    line-height: 1.5rem;
+    font-size: 1.1rem;
+}
 .skill{
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
+
 .skill_text{
     font-size: 1.3rem;
     font-weight: 500;
@@ -63,4 +70,21 @@
 }
 .image{
     cursor: pointer;
+}
+
+.education_text, .experience_text{
+    color: #FFF;
+    font-size: 1.3rem;
+    text-decoration: underline;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.right_icon{
+    font-size: 2rem;
+}
+.edu_exp{
+    padding-left: 125px;
+    display: flex;
+    flex-direction: column;
 }
