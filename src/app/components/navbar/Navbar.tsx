@@ -8,8 +8,8 @@ export default function Navbar() {
                 <div className={style.logo}>BIKALPA</div>
                 <div className={style.nav_link}>
                     <Link href='/' className={style.link}>Home</Link>
-                    <div className={style.link}>Projects</div>
-                    <div className={style.link}>Blog</div>
+                    <Link href='/projects' className={style.link}>Projects</Link>
+                    <Link href='/blog' className={style.link}>Blog</Link>
                 </div>
             </div>
             <div className={style.right}>
