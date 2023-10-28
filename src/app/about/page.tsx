@@ -11,9 +11,14 @@ import redux from '../../../public/Images/redux.png'
 import tailwind from '../../../public/Images/tailwind.png'
 import typescript from '../../../public/Images/typescript.png'
 import Image from 'next/image'
+import { Metadata } from 'next'
 
 import {LuGraduationCap} from 'react-icons/lu'
 import {TbDeviceImacCode} from 'react-icons/tb'
+
+export const metadata: Metadata = {
+  title : 'About'
+}
 
 function About() {
   const techStack = [

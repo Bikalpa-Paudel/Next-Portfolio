@@ -1,8 +1,12 @@
 import React from "react";
 import style from "./page.module.css";
-import { FiSearch } from "react-icons/fi"
 import Search from "../components/blog/search/Search";
 import Blogs from "../components/blog/blogs/Blogs";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title : 'Blog'
+}
 
 function page() {
   return (
