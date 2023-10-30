@@ -1,0 +1,22 @@
+.blog{
+    min-height: 100vh;
+    display: flex;
+}
+.left{
+    height: 100%;
+    flex: 1;
+}
+.right{
+    flex: 1;
+    background-color: black;
+}
+.l_top{
+    height: 100%;
+    padding-top: 120px;
+    padding-left: 125px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}

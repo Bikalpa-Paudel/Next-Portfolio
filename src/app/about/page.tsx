@@ -78,10 +78,10 @@ function About() {
             <div className={style.skill}>
               <div className={style.skill_text}>My TechStack So Far</div>
               <div className={style.stack_grid}>
-                {techStack.map(stack => {
+                {techStack.map((stack, index) => {
                   return(
                     <>
-                      <Image src={stack.logo} height={60} width={60} alt={stack.name} className={style.image}/>
+                      <Image key={index} src={stack.logo} height={60} width={60} alt={stack.name} className={style.image}/>
                     </>
                   )
                 })}
