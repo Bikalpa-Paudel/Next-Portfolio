@@ -3,43 +3,6 @@ async function Blogs() {
   const res = await getAllBlog();
   console.log(res)
   const allBlogs = res.posts;
-  const blogInfo = [
-    {
-      id: "1",
-      title: "First Blog",
-      date: "10/22/2023",
-    },
-    {
-      id: "2",
-      title: "Second Blog",
-      date: "10/28/2023",
-    },
-    {
-      id: "5",
-      title: "Second Blog",
-      date: "10/28/2023",
-    },
-    {
-      id: "3",
-      title: "Second Blog",
-      date: "10/28/2023",
-    },
-    {
-      id: "4",
-      title: "Second Blog",
-      date: "10/28/2023",
-    },
-    {
-      id: "6",
-      title: "Second Blog",
-      date: "10/28/2023",
-    },
-    {
-      id: "7",
-      title: "Second Blog",
-      date: "10/28/2023",
-    },
-  ];
 
   const blogPosts = allBlogs.map((item: any) => {
     return (
@@ -58,7 +21,8 @@ async function Blogs() {
 
 
 export async function getAllBlog() {
-  const res = await fetch("http://localhost:3000/api/blogs", { cache: 'no-store' } );
+  const URL = process.env.NODE_ENV == "production" ? "https://bikalpa-paudel.vercel.app/" : "http://localhost:3000/"
+  const res = await fetch(`${URL}/api/blogs`, { cache: 'no-store' } );
   
   const json = await res.json();
   
