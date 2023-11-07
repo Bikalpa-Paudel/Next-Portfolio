@@ -5,9 +5,8 @@ import style from './page.module.css'
 function Page() {
   
   const [title, setTitle] = useState('');
-  const [blogId, setBlogId] = useState('');
   
-  function handleSumbit(){
+  async function handleSumbit(){
     
   }
   return (
@@ -15,7 +14,7 @@ function Page() {
       <div className={style.left}>
         <div className={style.l_top}>
           <input type="text" />
-          <input type="id" />
+          <textarea name="description"></textarea>
           <button onSubmit={handleSumbit}>post</button>
         </div>
       </div>

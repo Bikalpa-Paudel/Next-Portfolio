@@ -2,7 +2,7 @@ import style from "./style.module.css";
 async function Blogs() {
   const res = await getAllBlog();
   console.log(res)
-  const allBlogs = res.blogs;
+  const allBlogs = res.posts;
   const blogInfo = [
     {
       id: "1",
