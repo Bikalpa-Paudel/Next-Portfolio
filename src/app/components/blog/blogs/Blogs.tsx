@@ -1,4 +1,5 @@
 import style from "./style.module.css";
+import Link from "next/link";
 async function Blogs() {
   const res = await getAllBlog();
   const allBlogs = res?.posts;
@@ -7,13 +8,13 @@ async function Blogs() {
     <div className={style.blogs}>
       {allBlogs ? (
         allBlogs.map((item: any) => (
-          <div key={item.id} className={style.blog_post}>
+          <Link href={"/blog/"+item.id} key={item.id} className={style.blog_post}>
             <div className={style.blog_image}></div>
             <div className={style.blog_info}>
               <h1>{item.title}</h1>
               <p>Created : {item.date}</p>
             </div>
-          </div>
+          </Link>
         ))
       ) : (
         <div>No Blogs</div>
