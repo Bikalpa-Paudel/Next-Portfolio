@@ -28,3 +28,10 @@ export async function POST(req: Request, res: NextResponse) {
     await prisma.$disconnect();
   }
 }
+
+// export async function DELETE() {
+//   try{
+//     await prisma.$connect();
+
+//   }
+// }
