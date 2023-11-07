@@ -21,7 +21,7 @@ async function Blogs() {
 
 
 export async function getAllBlog() {
-  const URL = process.env.NODE_ENV == "production" ? "https://bikalpa-paudel.vercel.app/" : "http://localhost:3000/"
+  const URL = process.env.NEXT_PUBLIC_URL;
   const res = await fetch(`${URL}/api/blogs`, { cache: 'no-store' } );
   
   const json = await res.json();
