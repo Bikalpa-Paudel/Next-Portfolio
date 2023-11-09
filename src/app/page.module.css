@@ -2,13 +2,6 @@
   display: flex;
   min-height: 100vh;
 }
-.right{
-  flex: 2;
-  background: url('portfolio.gif');
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: -99;
-}
 .left{
   padding-left: 125px;
   flex: 1;
