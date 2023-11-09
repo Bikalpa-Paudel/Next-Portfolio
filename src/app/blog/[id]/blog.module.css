@@ -1,0 +1,15 @@
+.blog_section{
+    min-height: 100vh;
+    padding-top: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.blog{
+    width: 70%;
+    background-color: white;
+    box-shadow: 1px 1px 1px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
