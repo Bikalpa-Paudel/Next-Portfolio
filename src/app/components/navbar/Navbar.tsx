@@ -14,7 +14,7 @@ export default function Navbar() {
       <ul className="flex items-center gap-[50px]">
         {navLink.map(({link, title}, index)=>{
             return(
-            <li key={index} className="p-2 hover:tracking-[5px] transition-all">
+            <li key={index} className="hover:tracking-[5px] transition-all">
                 <Link href={link}>{title}</Link>
             </li>
             )
