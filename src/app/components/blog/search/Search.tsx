@@ -4,9 +4,9 @@ import style from './style.module.css'
 
 function Search() {
   return (
-  <div className={style.search}>
-    <input type="text" placeholder="Search Blog" className={style.search_input}/>
-    <FiSearch className={style.search_icon}/>
+  <div className="flex items-center justify-between border border-black rounded-2xl p-[10px] w-full">
+    <input type="text" placeholder="Search Blog" className="w-full border-none outline-none bg-transparent text-2xl"/>
+    <FiSearch className="text-2xl cursor-pointer"/>
   </div>
   )
 }

@@ -1,5 +1,4 @@
 import React from "react";
-import style from "./page.module.css";
 import Search from "../components/blog/search/Search";
 import Blogs from "../components/blog/blogs/Blogs";
 import { Metadata } from "next";
@@ -10,14 +9,11 @@ export const metadata: Metadata = {
 
 function page() {
   return (
-    <div className={style.blog}>
-      <div className={style.left}>
-        <div className={style.l_top}>
+    <div className="p-[50px] md:p-[100px] min-h-[90vh]">
+      <div className="flex gap-8 flex-col items-center md:items-start">
           <Search />
           <Blogs />
         </div>
-      </div>
-      <div className={style.right}>right</div>
     </div>
   );
 }
