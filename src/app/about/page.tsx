@@ -1,15 +1,15 @@
 import style from './page.module.css'
 import {PiStarFourFill} from 'react-icons/pi'
-import Css from '../../../public/Images/css.png'
-import Html from '../../../public/Images/html.png'
-import Java from '../../../public/Images/java.png'
-import JavaScript from '../../../public/Images/javascript.png'
-import next from '../../../public/Images/next.png'
-import python from '../../../public/Images/python.png'
-import react from '../../../public/Images/react.png'
-import redux from '../../../public/Images/redux.png'
-import tailwind from '../../../public/Images/tailwind.png'
-import typescript from '../../../public/Images/typescript.png'
+import Css from '@/public/Images/css.png'
+import Html from '@/public/Images/html.png'
+import Java from '@/public/Images/java.png'
+import JavaScript from '@/public/Images/javascript.png'
+import next from '@/public/Images/next.png'
+import python from '@/public/Images/python.png'
+import react from '@/public/Images/react.png'
+import redux from '@/public/Images/redux.png'
+import tailwind from '@/public/Images/tailwind.png'
+import typescript from '@/public/Images/typescript.png'
 import Image from 'next/image'
 import { Metadata } from 'next'
 
@@ -67,7 +67,7 @@ function About() {
   return (
     <section id={style.about}>
         <div className={style.left}>
-          <div className={style.l_top}>
+          <div '@me={style.l_top}>
             <div className={style.heading}>
               <PiStarFourFill className={style.star_icon}/>
               <div className={style.about_text}>KNOW ABOUT ME</div>

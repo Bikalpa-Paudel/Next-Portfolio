@@ -1,24 +1,26 @@
-import {BsSun} from 'react-icons/bs'
-import style from './styles.module.css'
-import Link from 'next/link'
+import { BsSun } from "react-icons/bs";
+import Link from "next/link";
 export default function Navbar() {
+  const navLink = [
+    { link: "/", title: "Home" },
+    { link: "/about", title: "About" },
+    { link: "/blog", title: "Blog" },
+    { link: "/projects", title: "Projects" },
+    { link: "/contact", title: "Contact" },
+  ];
   return (
-        <nav className={style.nav}>
-            <div className={style.left}>
-                <div className={style.logo}>BIKALPA</div>
-                <div className={style.nav_link}>
-                    <Link href='/' className={style.link}>Home</Link>
-                    <Link href='/projects' className={style.link}>Projects</Link>
-                    <Link href='/blog' className={style.link}>Blog</Link>
-                </div>
-            </div>
-            <div className={style.right}>
-                <div className={style.nav_link}>
-                    <Link href="/about" className={style.link}>About</Link>
-                    <Link href='/contact' className={style.link}>Contact</Link>
-                </div>
-                <BsSun className={style.theme}/>
-            </div>
-        </nav>
-  )
+    <nav className="h-[10vh] flex justify-between items-center px-10 md:px-[100px]">
+      <h1 className="text-2xl font-bold">BIKALPA</h1>
+      <ul className="flex items-center gap-[50px]">
+        {navLink.map(({link, title}, index)=>{
+            return(
+            <li key={index} className="p-2 hover:tracking-[5px] transition-all">
+                <Link href={link}>{title}</Link>
+            </li>
+            )
+        })}
+      </ul>
+      <BsSun className="text-2xl cursor-pointer"/>
+    </nav>
+  );
 }
