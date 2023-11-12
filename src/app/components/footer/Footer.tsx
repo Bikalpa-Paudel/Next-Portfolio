@@ -1,18 +1,20 @@
-import {AiOutlineMail} from 'react-icons/ai'
-import {FiLinkedin, FiTwitter} from 'react-icons/fi'
-import style from './styles.module.css'
+import { AiOutlineMail } from "react-icons/ai";
+import { FiLinkedin, FiTwitter } from "react-icons/fi";
+import style from "./styles.module.css";
+import Link from "next/link";
 export default function Footer() {
   return (
-    <footer className={style.footer}>
-        <div className={style.email}><AiOutlineMail /> bikalpapaudel53@gmail.com</div>
-        <div className={style.copywrite}>&copy; 2023 | Bikalpa Paudel </div>
-        <div className={style.connect}>
-          <div className={style.icon}>
-            <FiLinkedin />
-            <FiTwitter />
-          </div>
-          <p className={style.connect_text}>connect with me</p>
-        </div>
+    <footer className="flex items-center justify-between mx-10 md:mx-[100px] border-t-[1px] pt-5">
+      <div className="">&copy; 2023: All Rights Reserved </div>
+      <div className="">Created by Bikalpa Paudel</div>
+      <div className="flex gap-4 text-white">
+        <Link href="#" className=" bg-black rounded-full p-2">
+          <FiLinkedin />
+        </Link>
+        <Link href="#" className="bg-black rounded-full p-2">
+          <FiTwitter />
+        </Link>
+      </div>
     </footer>
-  )
+  );
 }

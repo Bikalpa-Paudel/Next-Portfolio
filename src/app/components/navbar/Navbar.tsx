@@ -9,7 +9,7 @@ export default function Navbar() {
     { link: "/contact", title: "Contact" },
   ];
   return (
-    <nav className="h-[10vh] flex justify-between items-center px-10 md:px-[100px]">
+    <nav className="h-[10vh] flex justify-between items-center px-10 md:px-[100px] ">
       <h1 className="text-2xl font-bold">BIKALPA</h1>
       <ul className="flex items-center gap-[50px]">
         {navLink.map(({link, title}, index)=>{

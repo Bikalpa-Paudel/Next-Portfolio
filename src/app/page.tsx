@@ -6,52 +6,24 @@ import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
 
 import style from "./page.module.css";
 import Image from "next/image";
-import Gif from "@/public/Images/portfolio.gif"
+import Gif from "@/public/Images/portfolio.gif";
+import Link from "next/link";
 export default function Home() {
   return (
-    <section className={style.home}>
-      <div className={style.left}>
-        <div className={style.top}>
-          <PiStarFourFill className={style.star_icon} />
-          <div className={style.social}>
-            <FiTwitter className={style.social_icon} />
-            <FiGithub className={style.social_icon} />
-            <FiLinkedin className={style.social_icon} />
-          </div>
-        </div>
-        <div className={style.welcome}>Frontend Developer</div>
-        <div className={style.intro}>
-          <p className={style.intro_para}>HELLO, I AM A</p>
-          <p className={style.intro_para}>FRONTEND DEVELOPER</p>
-          <p className={style.intro_para}>FROM NEPAL</p>
-        </div>
-        <div className={style.button}>
-          <div className={style.cv}>
-            Download CV <GoDownload className={style.download_icon} />
-          </div>
-          <div className={style.contact}>
-            Reach me here <BiMessageRoundedDots />
-          </div>
-        </div>
-        <p className={style.info}>
-          I&apos;m currently focused on honing my frontend development skills
-          and have a strong desire to expand my expertise into backend and other
-          areas of software development in the future.
-        </p>
-        <div className={style.explore}>
-          <div className={style.green}></div>
-          <div className={style.explore_text}>Want to learn more about me?</div>
-        </div>
-        <div className={style.explore_part}>
-          <HiOutlineArrowTrendingDown className={style.arrow} />
-          <div className={style.explore_btn}>
-            EXPLORE <GoTelescope />
-          </div>
-        </div>
-      </div>
-      <div className="relative flex-[2] -z-10">
-        <Image src={Gif} alt="programming gif" fill={true}/>
-      </div>
+    <section className="w-full px-10 md:px-[100px] py-10">
+        {/* <div className="flex gap-10 items-center self-start text-xl md:text-[30px]">
+          <div className="w-full h-[2px] bg-black"></div>
+          <Link href="#" className="border-[#60ff44] border rounded-full p-2">
+            <FiTwitter />
+          </Link>
+          <Link href="#">
+          <FiGithub />
+          </Link>
+          <Link href="#">
+            <FiLinkedin />
+          </Link>
+          <div className="w-full h-[2px] bg-black"></div>
+        </div> */}
     </section>
   );
 }
