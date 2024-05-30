@@ -1,5 +1,6 @@
 import { BsSun } from "react-icons/bs";
 import Link from "next/link";
+import { ModeToggle } from "../buttons/theme";
 export default function Navbar() {
   const navLink = [
     { link: "/", title: "Home" },
@@ -20,7 +21,7 @@ export default function Navbar() {
             )
         })}
       </ul>
-      <BsSun className="text-2xl cursor-pointer"/>
+      <ModeToggle />
     </nav>
   );
 }
