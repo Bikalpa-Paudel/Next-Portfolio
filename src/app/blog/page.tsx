@@ -1,6 +1,6 @@
 import React from "react";
-import Search from "../components/blog/search/Search";
-import Blogs from "../components/blog/blogs/Blogs";
+import Search from "../../components/blog/search/Search";
+import Blogs from "../../components/blog/blogs/Blogs";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

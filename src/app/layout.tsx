@@ -1,8 +1,9 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Navbar from "@/app/components/navbar/Navbar";
-import Footer from "./components/footer/Footer";
+import Navbar from "@/components/navbar/Navbar";
+import Footer from "../components/footer/Footer";
+import { ThemeProvider } from "../components/ThemeProvider";
 
 export const metadata: Metadata = {
   title: {
@@ -26,9 +27,16 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.className}>
       <body className="m-0 p-0 box-border">
-        <Navbar />
-        {children}
-        <Footer />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Navbar />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
