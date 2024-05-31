@@ -128,7 +128,7 @@ function About() {
               </li>
               <li className="">
                 <h3 className="flex items-center gap-2">
-                  <PiStarFourFill />College's Development Platform{" "}
+                  <PiStarFourFill />College&apos;s Development Platform{" "}
                   <span>(september 2023 -- february 2024)</span>
                 </h3>
                 <p></p>
