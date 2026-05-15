@@ -1,13 +1,16 @@
-import prisma from "../../../../prisma";
+import prisma from "@/prisma";
 import { NextResponse } from "next/server";
-// export async function main(){
-//     await prisma.$connect();
-// }
-export async function GET() {
+
+export async function GET(req: Request) {
   try {
-    // await main();
+    const { searchParams } = new URL(req.url);
+    const category = searchParams.get("category");
+
     await prisma.$connect();
-    const posts = await prisma.blog.findMany();
+    const posts = await prisma.blog.findMany({
+      where: category ? { category } : undefined,
+      orderBy: { date: "desc" },
+    });
     return NextResponse.json({ message: "Success", posts }, { status: 200 });
   } catch (err) {
     return NextResponse.json({ message: "Error", err }, { status: 500 });
@@ -15,12 +18,18 @@ export async function GET() {
     await prisma.$disconnect();
   }
 }
-export async function POST(req: Request, res: NextResponse) {
+
+export async function POST(req: Request) {
   try {
-    const { title, description } = await req.json();
-    // await main();
+    const { title, description, category } = await req.json();
     await prisma.$connect();
-    const post = await prisma.blog.create({ data: { description, title } });
+    const post = await prisma.blog.create({
+      data: {
+        title,
+        description,
+        category: category && category.trim() ? category.trim() : "General",
+      },
+    });
     return NextResponse.json({ message: "Success", post }, { status: 201 });
   } catch (err) {
     return NextResponse.json({ message: "Error", err }, { status: 500 });
@@ -28,10 +37,3 @@ export async function POST(req: Request, res: NextResponse) {
     await prisma.$disconnect();
   }
 }
-
-// export async function DELETE() {
-//   try{
-//     await prisma.$connect();
-
-//   }
-// }

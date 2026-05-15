@@ -11,8 +11,15 @@ datasource db {
 }
 
 model Blog {
-  id String @id @default(auto()) @map("_id") @db.ObjectId
-  title String
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  title       String
   description String
-  date DateTime @default(now())
+  category    String   @default("General")
+  date        DateTime @default(now())
+}
+
+model SiteStat {
+  id    String @id @default(auto()) @map("_id") @db.ObjectId
+  key   String @unique
+  count Int    @default(0)
 }
